@@ -2,8 +2,13 @@ import express from "express";
 
 const app = express();
 const PORT = 3000;
+
 app.get("/", (req, res) => {
     res.send("Olá, mundo!");
+});
+
+app.get("/sobre", (req, res) => {
+    res.send("<h1> Sobre nós </h1>");
 });
 
 //método listen tem que ficar por último, depois das requisições http criadas
